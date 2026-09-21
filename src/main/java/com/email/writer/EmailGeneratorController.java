@@ -12,7 +12,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RestController
 @RequestMapping("/api/email")
 @AllArgsConstructor
-@CrossOrigin(origins = "${frontend.url}")
+@CrossOrigin(
+        originPatterns = {
+                "${frontend.url}",
+                "chrome-extension://*"
+        }
+)
 public class EmailGeneratorController {
 
     private final EmailGeneratorService emailGeneratorService;
