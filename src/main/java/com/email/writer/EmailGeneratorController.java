@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(
         originPatterns = {
                 "${frontend.url}",
+                "https://mail.google.com",
                 "chrome-extension://*"
         }
 )
